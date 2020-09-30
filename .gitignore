@@ -1,0 +1,9 @@
+Icon?
+*.inform/Build
+*.inform/Index
+*.inform/Metadata.iFiction
+*.inform/Release.blurb
+*.inform/manifest.plist
+*.inform/notes.rtf
+*.materials/Release
+gameinfo.dbg

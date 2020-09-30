@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+app="/Applications/Inform.app"
+bin="$app/Contents/MacOS"
+lib="$HOME/Library/Inform"
+proj="$(dirname $0)/The Archive.inform"
+
+exec frotz -d "$proj/Build/output.z8"

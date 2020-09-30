@@ -1,0 +1,25 @@
+#!/bin/bash -ex
+
+app="/Applications/Inform.app"
+bin="$app/Contents/MacOS"
+lib="$HOME/Library/Inform"
+proj="$(dirname $0)/The Archive.inform"
+
+$bin/ni \
+    -internal "$app/Contents/Resources/Internal" \
+    -external "$lib" \
+    -project "$proj" \
+    -format=z8
+
+if [ -n "$DEBUG" ]; then
+    opts="-kE2SDwv8"
+else
+    opts="-~kE2~S~Dwv8"
+fi
+
+$bin/inform6 \
+    $opts \
+    "+include_path=$app/Contents/Resources/Library/6.11,.,../Source" \
+    "$proj/Build/auto.inf" \
+    "$proj/Build/output.z8"
+

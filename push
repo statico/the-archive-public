@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+proj="$(dirname $0)/The Archive.inform"
+
+scp "$proj/Build/output.z8" lemon:data/stories/archive.z8
