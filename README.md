@@ -1,5 +1,7 @@
 # The Archive (Public Version)
 
+👉 **The file you probably want to look at is [`The Archive.inform/Source/story.ni`](https://github.com/statico/the-archive-public/blob/master/The%20Archive.inform/Source/story.ni).** 👈
+
 This is the public version of the text adventure game found on https://langworth.com. It's mostly the same source but without the initial puzzle secret and everything else inside.
 
 It's built with [Inform 7](http://inform7.com/), a system for creating interactive fiction (IF) games like Zork. On the web site it runs in a CRT terminal emulator ([langterm](https://github.com/statico/langterm)) with a Z-machine HTTP server ([ifhttp](https://github.com/statico/ifhttp)).
@@ -16,6 +18,6 @@ We'll install the IDE and use its pre-compiled tools, but I prefer to do develop
 1. Make sure the game compiles from Inform.app by opening `The Archive.inform` and clicking the "Go!" button.
 1. `npm install -g nodemon` for an easy file watcher
 1. Open three terminals:
-  1. `vim story.ni` - to edit the story
-  1. `nodemon -e ni -x ./build` - to build the .z8 file when the story changes
-  1. `nodemon -e z8 -x ./run` - to play the game
+1. `vim story.ni` - to edit the story
+1. `nodemon -e ni -x ./build` - to build the .z8 file when the story changes
+1. `nodemon -e z8 -x ./run` - to play the game
