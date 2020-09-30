@@ -6,6 +6,8 @@ This is the public version of the text adventure game found on https://langworth
 
 It's built with [Inform 7](http://inform7.com/), a system for creating interactive fiction (IF) games like Zork. On the web site it runs in a CRT terminal emulator ([langterm](https://github.com/statico/langterm)) with a Z-machine HTTP server ([ifhttp](https://github.com/statico/ifhttp)).
 
+You almost certainly want to read [Inform 7 for Programmers](http://www.ifwiki.org/index.php/Inform_7_for_Programmers).
+
 ![image](https://user-images.githubusercontent.com/137158/94717063-a6e96c00-0304-11eb-956c-24848b2a63e6.png)
 
 ## Getting started (macOS)
