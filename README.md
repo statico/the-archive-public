@@ -1,4 +1,4 @@
-# The Archive (Public Version)
+# The Archive
 
 👉 **The file you probably want to look at is [`The Archive.inform/Source/story.ni`](https://github.com/statico/the-archive-public/blob/master/The%20Archive.inform/Source/story.ni).** 👈
 
@@ -12,14 +12,20 @@ You almost certainly want to read [Inform 7 for Programmers](http://www.ifwiki.o
 
 ## Getting started (macOS)
 
-We'll install the IDE and use its pre-compiled tools, but I prefer to do development in the terminal.
+We'll install the IDE and use its pre-compiled tools, but I prefer to do development in the terminal using [glulxe](https://www.eblong.com/zarf/glulx/).
+
+The `build` command will build a Glulx game file with debug commands unless you specify `RELEASE=1`, in which case it will build a Z8 file. (You can use `frotz` to play Z8 game files.)
+
+In debug mode (`DEBUG=1`), the game will build a Glulx game file with debug commands (`showme`, `showverb`, etc.) because debugging stuff won't fit in the max Z8 VM size. In non-debug mode, it will build a Z8 file.
 
 1. `brew cask install inform` - installs the IDE and compiler
-1. `brew install frotz` - installs a command-line Z8 player
+1. `brew install glulxe` - installs a command-line Glulx player
 1. Open the extensions folder from Inform.app (probably `~/Library/Inform/Extensions`) and download https://github.com/i7/archive and extract the contents there
 1. Make sure the game compiles from Inform.app by opening `The Archive.inform` and clicking the "Go!" button.
 1. `npm install -g nodemon` for an easy file watcher
 1. Open three terminals:
-1. `vim story.ni` - to edit the story
-1. `nodemon -e ni -x ./build` - to build the .z8 file when the story changes
-1. `nodemon -e z8 -x ./run` - to play the game
+1. `vim story.ni` - to edit the story (and install my port of the [vim-inform7](https://github.com/statico/vim-inform7) syntax file)
+1. `nodemon -e ni -x ./build` - to build the .ulx file when the story changes
+1. `nodemon --signal SIGKILL -e ulx -w run -w . -x ./run` - to run a script through the game when the .ulx file changes
+
+Or run `glulxe output.ulx` to play interactively.

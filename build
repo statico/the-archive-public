@@ -1,25 +1,29 @@
-#!/bin/bash -ex
+#!/usr/bin/env bash
+
+set -eo pipefail
 
 app="/Applications/Inform.app"
 bin="$app/Contents/MacOS"
 lib="$HOME/Library/Inform"
 proj="$(dirname $0)/The Archive.inform"
 
+if [ -n "$RELEASE" ]; then
+    i6opts="-~kE2~S~Dwv8"
+    format="z8"
+else
+    i6opts="-kE2SDwG"
+    format="ulx"
+fi
+
 $bin/ni \
     -internal "$app/Contents/Resources/Internal" \
     -external "$lib" \
     -project "$proj" \
-    -format=z8
-
-if [ -n "$DEBUG" ]; then
-    opts="-kE2SDwv8"
-else
-    opts="-~kE2~S~Dwv8"
-fi
+    -format=$format
 
 $bin/inform6 \
-    $opts \
+    $i6opts \
     "+include_path=$app/Contents/Resources/Library/6.11,.,../Source" \
     "$proj/Build/auto.inf" \
-    "$proj/Build/output.z8"
+    "$proj/Build/output.$format"
 

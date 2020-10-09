@@ -1,8 +1,10 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
 
-app="/Applications/Inform.app"
-bin="$app/Contents/MacOS"
-lib="$HOME/Library/Inform"
-proj="$(dirname $0)/The Archive.inform"
+set -eo pipefail
 
-exec frotz -d "$proj/Build/output.z8"
+glulxe "$(dirname $0)/The Archive.inform/Build/output.ulx" <<EOF
+look door
+showme door
+showme keypad
+go south
+EOF
