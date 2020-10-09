@@ -16,8 +16,6 @@ We'll install the IDE and use its pre-compiled tools, but I prefer to do develop
 
 The `build` command will build a Glulx game file with debug commands unless you specify `RELEASE=1`, in which case it will build a Z8 file. (You can use `frotz` to play Z8 game files.)
 
-In debug mode (`DEBUG=1`), the game will build a Glulx game file with debug commands (`showme`, `showverb`, etc.) because debugging stuff won't fit in the max Z8 VM size. In non-debug mode, it will build a Z8 file.
-
 1. `brew cask install inform` - installs the IDE and compiler
 1. `brew install glulxe` - installs a command-line Glulx player
 1. Open the extensions folder from Inform.app (probably `~/Library/Inform/Extensions`) and download https://github.com/i7/archive and extract the contents there
