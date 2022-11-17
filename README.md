@@ -2,7 +2,7 @@
 
 This is the **public redacted version** of the text adventure game found on https://langworth.com. It's mostly the same source but without the initial puzzle secret and most of the story and secrets.
 
-> 👉 **The file you probably want to look at is [`the archive.inform/Source/story.ni`](https://github.com/statico/the-archive-public/blob/master/the%20archive.inform/Source/story.ni).** 👈
+> 👉 **The file you probably want to look at is [`the-archive.inform/Source/story.ni`](https://github.com/statico/the-archive-public/blob/master/the-archive.inform/Source/story.ni).** 👈
 
 It's built with [Inform 7](http://inform7.com/), a system for creating interactive fiction (IF) games like Zork. On the web site it runs in a CRT terminal emulator ([langterm](https://github.com/statico/langterm)) with a Z-machine HTTP server ([glulxe-httpd](https://github.com/statico/glulxe-httpd)).
 
