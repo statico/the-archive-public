@@ -2,9 +2,21 @@
 
 set -eo pipefail
 
-glulxe "$(dirname $0)/The Archive.inform/Build/output.ulx" <<EOF
-look door
-showme door
-showme keypad
+clear
+
+rm -f game.glksaverestore
+
+glulxe "$(dirname $0)/the-archive.inform/Build/output.ulx" <<EOF &
+game
+look
+go north
+go west
+go door
 go south
 EOF
+
+# glulxe uses curses, which uses 100% CPU while it polls for input. :(
+pid=$!
+trap "kill $pid" exit
+sleep 1
+

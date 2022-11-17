@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+cd "$(dirname $0)"
+
+if ! which dglulxe &>/dev/null ; then
+  echo "dglulxe not found. Please compile glulxe with cheapglk and put it in"
+  echo "the PATH somewhere as dglulxe."
+  exit 1
+fi
+
+echo "Building story..."
+RELEASE=1 ./build >/dev/null
+
+tmp="$(mktemp)"
+trap "{ rm -f $tmp; }" EXIT
+
+src=the-archive.inform/Source/story.ni
+out=the-archive.inform/Build/output.ulx
+
+exitcode=0
+
+for input in tests/*.in ; do
+  output="${input%.*}.out"
+  dglulxe $out <$input >$tmp
+  if [ "$1" = "-s" ]; then
+    cp $tmp $output
+  fi
+  if diff -q $output $tmp &>/dev/null ; then
+    echo "OK   - $output"
+  else
+    echo "FAIL - $output"
+    if [ "$1" = "-d" ]; then
+      diff -u $output $tmp
+    fi
+    exitcode=1
+  fi
+done
+
+exit $exitcode

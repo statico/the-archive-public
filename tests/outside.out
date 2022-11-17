@@ -1,0 +1,127 @@
+Welcome to the Cheap Glk Implementation, library version 1.0.6.
+
+
+
+
+WELCOME
+You have connected to Ian Langworth's archive.
+
+Enter GAME to continue.
+
+Other valid commands: LINKEDIN GITHUB DOTFILES BLOG TWITTER EMAIL ABOUT SOURCE LINKS PERLBOOK GPGKEY HELP
+
+Hint: Page Up and Page Down scroll when on desktop.
+
+Good luck!
+
+>WEST SIDE
+You are standing on the west side of a small, concrete building. Surrounding the building is a field of lush, green grass that meets the horizon in every direction under a clear blue sky. The entrance to the building is bare. A steel door is recessed into a square concrete building. You can go around the building to the north and south.
+
+>The lush, green grass under a clear sky reminds you of the Windows 95 wallpaper.
+
+>That's plainly inedible.
+
+>(first opening the steel door)
+It seems to be locked.
+
+>(first opening the steel door)
+It seems to be locked.
+
+>An old, tarnished, reinforced steel door appears to be the only way into the building. On the door is a numeric keypad.
+
+>The door appears to be locked with a keypad.
+
+>A brushed metal numeric keypad with buttons. You guess that it controls the steel door.
+
+>Try entering a number on the keypad, like ENTER 1234
+>
+NORTH SIDE
+The north side of the building is featureless and unremarkable. You can go east and west.
+
+>
+EAST SIDE
+The east side of the building is as plain as the rest. The concrete wall is cracked and has clearly been here for some time. You can go north and south.
+
+>A single-story, aged, crumbling concrete building that appears to have been once been painted white. It stands as a solitary cube in the green grassy field.
+
+>A long, thin crack has appeared in the concrete, probably from the building settling over time.
+
+>
+SOUTH SIDE
+The south side of the building is featureless other than a few cracked paint chips where the concrete was painted white a long time ago. You can go east and west.
+
+You can see a pile of debris and some paint chips here. 
+>There is no keypad here on which you can enter a code.
+
+>That's not a verb I recognize.
+
+>You rummage through the debris. It's mostly paint chips but you also find a scrap of paper.
+
+>You find nothing of interest.
+
+>That's fixed in place.
+
+>Taken.
+
+>You see nothing special about the paint chips.
+
+>You're carrying some paint chips.
+
+>Bits of concrete and paint appear to have collected at the base of the wall.
+
+>The piece of paper is a torn corner of a larger document. You can make out the numbers "000" but the paper has rotted away where the last number was written.
+
+>Taken.
+
+>The other side of the scrap of paper is blank.
+
+>You're carrying a scrap of paper and some paint chips.
+
+>
+WEST SIDE
+You are standing on the west side of a small, concrete building. Surrounding the building is a field of lush, green grass that meets the horizon in every direction under a clear blue sky. The entrance to the building is bare. A steel door is recessed into a square concrete building. You can go around the building to the north and south.
+
+>A brushed metal numeric keypad with buttons. You guess that it controls the steel door.
+
+>An old, tarnished, reinforced steel door appears to be the only way into the building. On the door is a numeric keypad.
+
+>What do you want to press?
+
+>Try entering a number on the keypad, like ENTER 1234
+>Nothing happens for a few moments, and then the keypad emits a negative-sounding tone. Maybe the code needs more numbers?
+
+>Nothing happens for a few moments, and then the keypad emits a negative-sounding tone. Maybe the code needs more numbers?
+
+>The keypad beeps negatively, but other than that nothing happens.
+
+>What do you want to tap?
+
+>Try entering a number on the keypad, like ENTER 1234
+>Nothing happens for a few moments, and then the keypad emits a negative-sounding tone. Maybe the code needs more numbers?
+
+>The keypad beeps negatively, but other than that nothing happens.
+
+>The keypad only has numbers on the buttons.
+
+>The keypad only has numbers on the buttons.
+
+>The keypad only has numbers on the buttons.
+
+>The keypad chirps excitedly. From behind the door you hear a large whirring sound followed by a series of metallic clanks. The whirring stops and the steel door opens slowly.
+
+>It is already unlocked.
+
+>
+UPPER STAIRCASE
+As you enter the small building, a fluorescent light flickers to life and reveals bare, unfinished concrete walls. In the center of the room an industrial-looking spiral staircase goes down into darkness.
+
+>
+WEST SIDE
+You are standing on the west side of a small, concrete building. Surrounding the building is a field of lush, green grass that meets the horizon in every direction under a clear blue sky. The entrance to the building is bare. A steel door is recessed into a square concrete building. You can go around the building to the north and south.
+
+>
+UPPER STAIRCASE
+As you enter the small building, a fluorescent light flickers to life and reveals bare, unfinished concrete walls. In the center of the room an industrial-looking spiral staircase goes down into darkness.
+
+>
+<end of input>

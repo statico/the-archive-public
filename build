@@ -2,28 +2,34 @@
 
 set -eo pipefail
 
-app="/Applications/Inform.app"
-bin="$app/Contents/MacOS"
-lib="$HOME/Library/Inform"
-proj="$(dirname $0)/The Archive.inform"
+if [ "$(uname -s)" = "Darwin" ]; then
+    app="/Applications/Inform.app"
+    bin="$app/Contents/MacOS"
+    lib="$HOME/Library/Inform"
+    share="$app/Contents/Resources"
+else
+    bin="/usr/local/share/inform7/Compilers"
+    lib="$HOME/Library/Inform"
+    share="/usr/local/share/inform7"
+fi
+
+proj="$(dirname $0)/the-archive.inform"
 
 if [ -n "$RELEASE" ]; then
-    i6opts="-~kE2~S~Dwv8"
-    format="z8"
+    i6opts="-~kE2~S~Dwv8G"
 else
     i6opts="-kE2SDwG"
-    format="ulx"
 fi
 
 $bin/ni \
-    -internal "$app/Contents/Resources/Internal" \
+    -internal "$share/Internal" \
     -external "$lib" \
     -project "$proj" \
-    -format=$format
+    -format=ulx
 
 $bin/inform6 \
     $i6opts \
-    "+include_path=$app/Contents/Resources/Library/6.11,.,../Source" \
+    "+include_path=$share/Library/6.11,.,../Source" \
     "$proj/Build/auto.inf" \
-    "$proj/Build/output.$format"
+    "$proj/Build/output.ulx"
 

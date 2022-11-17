@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+scp output.ulx langworth.com:data/stories/archive.ulx
